@@ -1,0 +1,13 @@
+.item {
+    display: flex;
+    margin: auto;
+    width: 640px;
+    padding: 4px; 
+    color: #000000;
+    text-decoration: none;
+    background: #fafafa;
+}
+
+.item:hover {
+    background: #ffffff;
+}
