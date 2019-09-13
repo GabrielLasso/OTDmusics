@@ -1,7 +1,10 @@
-.item {
-    display: flex;
+body {
     margin: auto;
     width: 640px;
+}
+
+.item {
+    display: flex;
     padding: 4px; 
     color: #000000;
     text-decoration: none;
