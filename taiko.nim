@@ -20,7 +20,7 @@ let jsonFile = """
         "description":"Testando123"
       },
       {
-        "id":"Ra-NXgoMZc8",
+        "id":"",NNXgoMZc8
         "title":"Furusatou no Hibikiasd",
         "description":"Testandoasd"
       }
@@ -56,18 +56,17 @@ proc youtubeThumbnail(id : string) : string =
 
 var list = newSeq[Video]()
 
-proc updateList(search : string) =
-  list.delete(0, len(list))
-  list.insert(data.videos.filter(
+proc filterVideoList(list : seq[Video], search : string) : seq[Video] =
+  return list.filter(
     proc (item : Video) : bool =
-      result = item.title.contains(search)
-    ))
+      result = item.title.toLower.contains(search.toLower) or item.description.toLower.contains(search.toLower)
+    )
 
 proc createDom(): VNode =
   result = buildHtml(tdiv):
     input():
       proc oninput(ev : Event, node : VNode) =
-        updateList($node.value)
+        list = filterVideoList(data.videos, $node.value)
     for item in list:
       a(href = youtubeUrl(item.id), target="_blank", class = "item"):
         img(src = youtubeThumbnail(item.id))
@@ -79,4 +78,4 @@ proc createDom(): VNode =
 
 setRenderer createDom
 
-updateList("")
+list = filterVideoList(data.videos, "")

@@ -1,6 +1,7 @@
 body {
     margin: auto;
     width: 640px;
+    background: #fafafa;
 }
 
 .item {
@@ -8,7 +9,6 @@ body {
     padding: 4px; 
     color: #000000;
     text-decoration: none;
-    background: #fafafa;
 }
 
 .item:hover {
