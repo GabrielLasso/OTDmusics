@@ -35,10 +35,8 @@ proc youtubeThumbnail(id : string) : string =
   result = fmt "https://img.youtube.com/vi/{id}/default.jpg"
 
 #
-# Create DOM
+# Search methods
 #
-
-var list = newSeq[Video]()
 
 proc filterVideoList(list : seq[Video], search : string) : seq[Video] =
   return list.filter(
@@ -46,8 +44,15 @@ proc filterVideoList(list : seq[Video], search : string) : seq[Video] =
       result = item.title.toLower.contains(search.toLower) or item.description.toLower.contains(search.toLower)
     )
 
+#
+# Create DOM
+#
+
+var list = filterVideoList(data.videos, "")
+
 proc createDom(): VNode =
   result = buildHtml(tdiv):
+    text("Pesquisar:")
     input():
       proc oninput(ev : Event, node : VNode) =
         list = filterVideoList(data.videos, $node.value)
@@ -61,5 +66,3 @@ proc createDom(): VNode =
 
 
 setRenderer createDom
-
-list = filterVideoList(data.videos, "")
