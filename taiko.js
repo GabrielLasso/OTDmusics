@@ -2770,7 +2770,7 @@ function HEX5BHEX5D_224369(node_224371, index_224372) {
 					var Tmp7;
 				var Tmp8;
 					var Tmp9;
-var json_file_243027 = makeNimstrLit("{\x0A    \"videos\":[\x0A      {\x0A        \"id\":\"Ra-NXgoMZc8\",\x0A        \"title\":\"Campeonato nihon 2011\",\x0A        \"description\":\"Furusatou no Hibiki\"\x0A      },\x0A      {\x0A        \"id\":\"oRZp1R0zV18\",\x0A        \"title\":\"Campeonato brasileiro 2019\",\x0A        \"description\":\"Wadatsumi\"\x0A      },\x0A      {\x0A        \"id\":\"GQujenMmpPU\",\x0A        \"title\":\"2\xC2\xBA Japan Matsuri 2010\",\x0A        \"description\":\"Fuuga tenshou\"\x0A      },\x0A      {\x0A        \"id\":\"OO9j7rWNk9Y\",\x0A        \"title\":\"10\xC2\xBA Japan Matsuri 2019\",\x0A        \"description\":\"Kenka Yatai, Pikachu, Goen, Iroha, Shabondama, Irodori, Gekiryu, Jyuugosou monogatari\"\x0A      },\x0A      {\x0A        \"id\":\"\",\x0A        \"title\":\"\",\x0A        \"description\":\"\"\x0A      },\x0A      {\x0A        \"id\":\"\",\x0A        \"title\":\"\",\x0A        \"description\":\"\"\x0A      },\x0A      {\x0A        \"id\":\"\",\x0A        \"title\":\"\",\x0A        \"description\":\"\"\x0A      },\x0A      {\x0A        \"id\":\"\",\x0A        \"title\":\"\",\x0A        \"description\":\"\"\x0A      },\x0A      {\x0A        \"id\":\"\",\x0A        \"title\":\"\",\x0A        \"description\":\"\"\x0A      },\x0A      {\x0A        \"id\":\"\",\x0A        \"title\":\"\",\x0A        \"description\":\"\"\x0A      }\x0A    ]\x0A}\x0A");
+var json_file_243027 = makeNimstrLit("{\x0A    \"videos\":[\x0A      {\x0A        \"id\":\"Ra-NXgoMZc8\",\x0A        \"title\":\"Campeonato nihon 2011\",\x0A        \"description\":\"Furusatou no Hibiki\"\x0A      },\x0A      {\x0A        \"id\":\"oRZp1R0zV18\",\x0A        \"title\":\"Campeonato brasileiro 2019\",\x0A        \"description\":\"Wadatsumi\"\x0A      },\x0A      {\x0A        \"id\":\"GQujenMmpPU\",\x0A        \"title\":\"2\xC2\xBA Japan Matsuri 2010\",\x0A        \"description\":\"Fuuga tenshou\"\x0A      },\x0A      {\x0A        \"id\":\"OO9j7rWNk9Y\",\x0A        \"title\":\"10\xC2\xBA Japan Matsuri 2019\",\x0A        \"description\":\"Kenka Yatai, Pikachu, Goen, Iroha, Shabondama, Irodori, Gekiryu, Jyuugosou monogatari\"\x0A      },\x0A      {\x0A        \"id\":\"-X7mBGFsWNU\",\x0A        \"title\":\"Campos do Jord\xC3\xA3o 2017 Asilo Sakura Home\",\x0A        \"description\":\"Shabondama, Irodori, Fuuga tenshou\"\x0A      },\x0A      {\x0A        \"id\":\"8SWoSqLODV4\",\x0A        \"title\":\"Todoroki fest 2016\",\x0A        \"description\":\"Irodori new, solo TAO, Shunka, Yamato gokoro, Iroha, Kenka yatai, Shabondama, Natsukashiki satou, Notodaiko, Omoide\"\x0A      },\x0A      {\x0A        \"id\":\"DyCbSHwaNHQ\",\x0A        \"title\":\"3\xC2\xBA Japan Matsuri 2012\",\x0A        \"description\":\"Fuuga tenshou\"\x0A      },\x0A      {\x0A        \"id\":\"IztKDK5iiDw\",\x0A        \"title\":\"VI Campeonato brasileiro 2009\",\x0A        \"description\":\"Go-en\"\x0A      },\x0A      {\x0A        \"id\":\"7nBf_6lGyXk\",\x0A        \"title\":\"V Campeonato brasileiro 2008\",\x0A        \"description\":\"Wadatsumi\"\x0A      },\x0A      {\x0A        \"id\":\"5dg42GOmZvs\",\x0A        \"title\":\"Campos do Jord\xC3\xA3o 2017\",\x0A        \"description\":\"Kenka yatai, Ryoma no tikara, Shabondama, Notodaiko, Fuuga tenshou, Irodori new\"\x0A      },\x0A      {\x0A        \"id\":\"yHO-FqF0UtA\",\x0A        \"title\":\"Campeonato UCES 2013\",\x0A        \"description\":\"Kizuki\"\x0A      }\x0A    ]\x0A}\x0A");
 var json_object_243037 = parse_json_232257(json_file_243027);
 var temp_243048 = json_object_243037;
 if (!((ConstSet4[temp_243048.kind] != undefined))) {
@@ -5230,7 +5230,7 @@ function filter_video_list_245054(list_245057, search_245058) {
 
 			var F={procname:"filterVideoList.:anonymous",prev:framePtr,filename:"taiko.nim",line:0};
 			framePtr = F;
-				F.line = 102;
+				F.line = 107;
 				result_245065 = (contains_165677(nuctoLowerStr(item_245064.title), nuctoLowerStr(search_245058)) || contains_165677(nuctoLowerStr(item_245064.description), nuctoLowerStr(search_245058)));
 			framePtr = F.prev;
 
@@ -5243,7 +5243,7 @@ function filter_video_list_245054(list_245057, search_245058) {
 	var F={procname:"taiko.filterVideoList",prev:framePtr,filename:"taiko.nim",line:0};
 	framePtr = F;
 	BeforeRet: do {
-		F.line = 100;
+		F.line = 105;
 		result_245060 = nimCopy(null, filter_245081(list_245057, HEX3Aanonymous_245062), NTI245089);
 		break BeforeRet;
 	} while (false);
@@ -5859,12 +5859,12 @@ function youtube_url_244957(id_244959) {
 
 	var F={procname:"taiko.youtubeUrl",prev:framePtr,filename:"taiko.nim",line:0};
 	framePtr = F;
-		F.line = 88;
-		F.line = 88;
+		F.line = 93;
+		F.line = 93;
 		var fmt_res_244964 = [mnewString(0)];
-		F.line = 88;
+		F.line = 93;
 		if (fmt_res_244964[0] != null) { fmt_res_244964[0] = (fmt_res_244964[0]).concat(makeNimstrLit("https://www.youtube.com/watch?v=")); } else { fmt_res_244964[0] = makeNimstrLit("https://www.youtube.com/watch?v="); };
-		F.line = 88;
+		F.line = 93;
 		format_value_237687(fmt_res_244964, 0, id_244959, []);
 		result_244960 = nimCopy(null, fmt_res_244964[0], NTI138);
 	framePtr = F.prev;
@@ -5878,14 +5878,14 @@ function youtube_thumbnail_244984(id_244986) {
 
 	var F={procname:"taiko.youtubeThumbnail",prev:framePtr,filename:"taiko.nim",line:0};
 	framePtr = F;
-		F.line = 91;
-		F.line = 91;
+		F.line = 96;
+		F.line = 96;
 		var fmt_res_244988 = [mnewString(0)];
-		F.line = 91;
+		F.line = 96;
 		if (fmt_res_244988[0] != null) { fmt_res_244988[0] = (fmt_res_244988[0]).concat(makeNimstrLit("https://img.youtube.com/vi/")); } else { fmt_res_244988[0] = makeNimstrLit("https://img.youtube.com/vi/"); };
-		F.line = 91;
+		F.line = 96;
 		format_value_237687(fmt_res_244988, 0, id_244986, []);
-		F.line = 91;
+		F.line = 96;
 		if (fmt_res_244988[0] != null) { fmt_res_244988[0] = (fmt_res_244988[0]).concat(makeNimstrLit("/default.jpg")); } else { fmt_res_244988[0] = makeNimstrLit("/default.jpg"); };
 		result_244987 = nimCopy(null, fmt_res_244988[0], NTI138);
 	framePtr = F.prev;
@@ -5912,7 +5912,7 @@ function create_dom_245142() {
 		function HEX3Aanonymous_245202(ev_245204, node_245205) {
 			var F={procname:"createDom.:anonymous",prev:framePtr,filename:"taiko.nim",line:0};
 			framePtr = F;
-				F.line = 109;
+				F.line = 114;
 				list_245040[0] = nimCopy(null, filter_video_list_245054(data_244822.videos, cstrToNimstr(value_169822(node_245205))), NTI245059);
 			framePtr = F.prev;
 
@@ -5923,17 +5923,17 @@ function create_dom_245142() {
 
 	var F={procname:"taiko.createDom",prev:framePtr,filename:"taiko.nim",line:0};
 	framePtr = F;
-		F.line = 106;
-		F.line = 106;
+		F.line = 111;
+		F.line = 111;
 		var tmp_245182 = tree_172246(43, []);
-		F.line = 107;
+		F.line = 112;
 		var tmp_245183 = tree_172246(105, []);
-		F.line = 108;
+		F.line = 113;
 		add_event_handler_197928(tmp_245183, 25, HEX3Aanonymous_245202, kxi_189326[0]);
-		F.line = 108;
+		F.line = 113;
 		add_170800(tmp_245182, tmp_245183);
 		L1: do {
-			F.line = 110;
+			F.line = 115;
 			var item_245414 = {id: null, title: null, description: null};
 			F.line = 185;
 			var i_245600 = 0;
@@ -5943,35 +5943,35 @@ function create_dom_245142() {
 				F.line = 187;
 					L3: while (true) {
 					if (!(i_245600 < l_245601)) break L3;
-						F.line = 110;
+						F.line = 115;
 						nimCopy(item_245414, list_245040[0][chckIndx(i_245600, 0, list_245040[0].length+0-1)-0], NTI243029);
-						F.line = 111;
+						F.line = 116;
 						var tmp_245185 = tree_172246(44, []);
-						F.line = 111;
+						F.line = 116;
 						set_attr_170568(tmp_245185, "href", toJSStr(youtube_url_244957(item_245414.id)));
-						F.line = 111;
+						F.line = 116;
 						set_attr_170568(tmp_245185, "target", "_blank");
-						F.line = 111;
+						F.line = 116;
 						tmp_245185.class = "item";
-						F.line = 112;
+						F.line = 117;
 						var tmp_245190 = tree_172246(75, []);
-						F.line = 112;
+						F.line = 117;
 						set_attr_170568(tmp_245190, "src", toJSStr(youtube_thumbnail_244984(item_245414.id)));
-						F.line = 112;
+						F.line = 117;
 						add_170800(tmp_245185, tmp_245190);
-						F.line = 113;
+						F.line = 118;
 						var tmp_245191 = tree_172246(43, []);
-						F.line = 114;
+						F.line = 119;
 						add_170800(tmp_245191, text_172364(item_245414.title));
-						F.line = 115;
+						F.line = 120;
 						var tmp_245192 = tree_172246(71, []);
-						F.line = 115;
+						F.line = 120;
 						add_170800(tmp_245191, tmp_245192);
-						F.line = 116;
+						F.line = 121;
 						add_170800(tmp_245191, text_172364(item_245414.description));
-						F.line = 116;
+						F.line = 121;
 						add_170800(tmp_245185, tmp_245191);
-						F.line = 116;
+						F.line = 121;
 						add_170800(tmp_245182, tmp_245185);
 						F.line = 189;
 						i_245600 = addInt(i_245600, 1);
