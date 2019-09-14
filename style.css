@@ -5,8 +5,8 @@ body {
 }
 
 img {
-    height: 90px;
-    width: 120px;
+    min-height: 90px;
+    min-width: 120px;
 }
 
 .item {
