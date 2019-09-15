@@ -4,6 +4,7 @@ import karax / vdom
 import karax / vstyles
 import json
 import strformat
+import sugar
 import sequtils
 import strutils
 import videosJson
@@ -16,7 +17,7 @@ type
   Video = object
     id : string
     title : string
-    description : string
+    tags : seq[string]
 
   Data = object
     videos : seq[Video]
@@ -38,11 +39,19 @@ proc youtubeThumbnail(id : string) : string =
 # Search methods
 #
 
+proc someItemContains(list : seq[string], str: string) : bool =
+  for item in list:
+    if item.contains str:
+      return true
+  return false
+
+proc searchFilter(search : string) : proc (video : Video) : bool =
+  return proc(video : Video) : bool =
+    return video.title.toLower.contains(search.toLower) or 
+      video.tags.map(a => a.toLower).someItemContains(search.toLower)
+
 proc filterVideoList(list : seq[Video], search : string) : seq[Video] =
-  return list.filter(
-    proc (item : Video) : bool =
-      result = item.title.toLower.contains(search.toLower) or item.description.toLower.contains(search.toLower)
-    )
+  return list.filter(searchFilter search)
 
 #
 # Create DOM
@@ -57,12 +66,16 @@ proc createDom(): VNode =
       proc oninput(ev : Event, node : VNode) =
         list = filterVideoList(data.videos, $node.value)
     for item in list:
-      a(href = youtubeUrl(item.id), target="_blank", class = "item"):
-        img(src = youtubeThumbnail(item.id))
+      tdiv(class = "item"):
+        a(href = youtubeUrl(item.id), target="_blank"):
+          img(src = youtubeThumbnail(item.id))
         tdiv:
-          text item.title
+          a(href = youtubeUrl(item.id), target="_blank"):
+            text item.title
           br()
-          text item.description
+          for tag in item.tags:
+            tdiv(class = "tag"):
+              text tag
 
 
 setRenderer createDom

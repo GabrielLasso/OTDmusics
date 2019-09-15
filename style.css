@@ -9,10 +9,23 @@ img {
     min-width: 120px;
 }
 
+.tag {
+    background-color: #afffaf;
+    font-size: 12px;
+    border-radius: 12px;
+    padding: 4px 8px;
+    margin: 4px;
+    float: left;
+    cursor: pointer;
+}
+
 .item {
     display: flex;
-    padding: 4px; 
-    color: #000000;
+    padding: 4px;
+}
+
+a {
+     color: #000000;
     text-decoration: none;
 }
 
