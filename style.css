@@ -5,8 +5,8 @@ body {
 }
 
 img {
-    min-height: 90px;
-    min-width: 120px;
+    min-height: 96px;
+    min-width: 128px;
 }
 
 .tag {
@@ -24,11 +24,26 @@ img {
     padding: 4px;
 }
 
+.item:hover {
+    background: #ffffff;
+}
+
+/* .header {
+    height: 32px;
+} */
+
 a {
-     color: #000000;
+    color: #000000;
     text-decoration: none;
 }
 
-.item:hover {
-    background: #ffffff;
+.search {
+    float: right;
+}
+
+.searchBar {
+    border : 1px solid #ffafff;
+    height: 24px;
+    margin-left: auto;
+    margin-right: 0;
 }

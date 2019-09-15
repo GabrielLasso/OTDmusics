@@ -61,10 +61,13 @@ var list = filterVideoList(data.videos, "")
 
 proc createDom(): VNode =
   result = buildHtml(tdiv):
-    text("Pesquisar:")
-    input():
-      proc oninput(ev : Event, node : VNode) =
-        list = filterVideoList(data.videos, $node.value)
+    tdiv(class = "header"):
+      img(src = "resources/logo.png")
+      tdiv(class = "search"):
+        text("Pesquisar:")
+        input(class = "searchBar"):
+          proc oninput(ev : Event, node : VNode) =
+            list = filterVideoList(data.videos, $node.value)
     for item in list:
       tdiv(class = "item"):
         a(href = youtubeUrl(item.id), target="_blank"):
