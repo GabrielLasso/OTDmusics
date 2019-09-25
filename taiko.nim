@@ -79,8 +79,9 @@ proc createDom(): VNode =
             text item.title
           br()
           for tag in item.tags:
-            p(class = "tag", id = tag):
+            tdiv(class = fmt"tag", id = tag):
               text tag
+
               proc onclick(ev : Event, node : VNode) =
                 list = filterVideoList(data.videos, $node.id)
 
