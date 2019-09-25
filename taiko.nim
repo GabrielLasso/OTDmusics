@@ -62,7 +62,9 @@ var list = filterVideoList(data.videos, "")
 proc createDom(): VNode =
   result = buildHtml(tdiv):
     tdiv(class = "header"):
-      img(src = "resources/logo.png")
+      img(src = "resources/logo.png"):
+        proc onclick(ev : Event, node : VNode) =
+            list = filterVideoList(data.videos, "")
       tdiv(class = "search"):
         text("Pesquisar:")
         input(class = "searchBar"):
@@ -77,8 +79,9 @@ proc createDom(): VNode =
             text item.title
           br()
           for tag in item.tags:
-            tdiv(class = "tag"):
+            p(class = "tag", id = tag):
               text tag
-
+              proc onclick(ev : Event, node : VNode) =
+                list = filterVideoList(data.videos, $node.id)
 
 setRenderer createDom
